@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────────────────────
+# Bottling Line Simulator — Configuration
+# Amárach StackWorks  |  v1.0  |  2026-02-26
+# ─────────────────────────────────────────────────────────────
+
+simulator:
+  instance_id: "sim01"
+  speed_factor: 60.0          # 1.0 = real-time, 60 = 1 min wall = 1 hr sim
+  tick_hz: 10                 # Simulation loop rate (wall clock Hz)
+  schedule_xlsx: "ISA95_Bottling_Line_Model_v1.xlsx"   # path relative to simulator root
+
+modbus:
+  host: "0.0.0.0"
+  port: 502                   # Standard Modbus TCP port (use 5020 if no root)
+  unit_id: 1
+
+enterprise:
+  name: Aerogen
+  site: Shannon
+  area: Bottling
+  line: Line01
+
+production:
+  # Mean time between microstops (sim seconds). At 120 bpm that's ~1 stop per ~480 bottles.
+  microstop_mean_interval_s: 480
+  # Probability of a bottle being rejected by quality (independent of microstops)
+  base_reject_probability: 0.015
+  # Label stock starting level (%)
+  label_stock_initial_pct: 95
+  # Label stock depletion per 1000 bottles (%)
+  label_stock_depletion_per_1000: 3.0
+  # Cap stock starting level
+  cap_stock_initial_pct: 98
+
+logging:
+  level: INFO                  # DEBUG / INFO / WARNING
+  transactions_file: "logs/transactions.jsonl"
+  console: true
