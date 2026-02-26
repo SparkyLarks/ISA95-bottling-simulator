@@ -5,7 +5,7 @@
 
 simulator:
   instance_id: "sim01"
-  speed_factor: 60.0          # 1.0 = real-time, 60 = 1 min wall = 1 hr sim
+  speed_factor: 1.0          # 1.0 = real-time, 60 = 1 min wall = 1 hr sim
   tick_hz: 10                 # Simulation loop rate (wall clock Hz)
   schedule_xlsx: "ISA95_Bottling_Line_Model_v1.xlsx"   # path relative to simulator root
 
@@ -15,8 +15,8 @@ modbus:
   unit_id: 1
 
 enterprise:
-  name: Aerogen
-  site: Shannon
+  name: Amarach
+  site: Crosshaven
   area: Bottling
   line: Line01
 
