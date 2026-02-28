@@ -35,9 +35,9 @@ telemetry/{enterprise}/{site}/{area}/{line}/{station}/{signal}
 
 Examples:
 
-telemetry/Aerogen/Shannon/Bottling/Line01/Filler01/actual_weight_g
-telemetry/Aerogen/Shannon/Bottling/Line01/Line01/line_speed_bpm
-telemetry/Aerogen/Shannon/Bottling/Line01/Capper01/torque_actual_ncm
+telemetry/Amarach/Crosshaven/Shannon/Bottling/Line01/Filler01/actual_weight_g
+telemetry/Amarach/Crosshaven//Shannon/Bottling/Line01/Line01/line_speed_bpm
+telemetry/Amarach/Crosshaven/Shannon/Bottling/Line01/Capper01/torque_actual_ncm
 
 
 Notes:
@@ -54,9 +54,9 @@ transactions/{enterprise}/{site}/{area}/{line}/{eventType}
 
 Examples:
 
-transactions/Aerogen/Shannon/Bottling/Line01/OrderStarted
-transactions/Aerogen/Shannon/Bottling/Line01/MicrostopStarted
-transactions/Aerogen/Shannon/Bottling/Line01/BottleCompleted
+transactions/Amarach/CrosshavenBottling/Line01/OrderStarted
+transactions/Amarach/Crosshaven/Bottling/Line01/MicrostopStarted
+transactions/Amarach/Crosshaven/Bottling/Line01/BottleCompleted
 
 
 ---
@@ -97,8 +97,8 @@ Field	Type	Required	Notes
 eventType	string	Yes	Must match topic tail
 eventId	string	Yes	UUID/ULID
 ts	string (ISO8601)	Yes	UTC ISO
-enterprise	string	Yes	e.g. Aerogen
-site	string	Yes	e.g. Shannon
+enterprise	string	Yes	e.g. Amarach
+site	string	Yes	e.g. Crosshaven
 area	string	Yes	e.g. Bottling
 line	string	Yes	e.g. Line01
 orderId	string/null	Yes	null allowed when IDLE
